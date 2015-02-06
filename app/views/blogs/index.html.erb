@@ -1,0 +1,9 @@
+<h1>My Blog, watch yoself!</h1>
+<% @blogs.reverse_each do |blog| %>
+<h2><%= link_to blog.title, blog %></h2>
+<h5>POSTED: <%= blog.created_at %> // LAST UPDATED: <%= blog.updated_at %></h5>
+<%= blog.content %>
+<% end %>
+
+<br /><br />
+<%= link_to 'Add a post!', new_blog_path %>

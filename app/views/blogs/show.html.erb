@@ -1,0 +1,12 @@
+  <h2><%= @blog.title %></h2>
+  <h5>POSTED: <%= @blog.created_at %> // LAST UPDATED: <%= @blog.updated_at %></h5>
+  <%= @blog.content %>
+
+
+<br /><br />
+<%= link_to 'home', blogs_path %>
+<br /><br />
+<%= link_to 'edit', edit_blog_path(@blog) %>
+<br /><br />
+
+<%= link_to 'delete', @blog, method: :delete %>
